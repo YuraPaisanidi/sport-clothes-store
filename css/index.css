@@ -1,0 +1,395 @@
+body {
+  margin: 0 auto;
+  font-family: "PT Sans", sans-serif;
+  max-width: 1920px;
+}
+
+img {
+  max-width: 300px;
+}
+
+li {
+  list-style-type: none;
+}
+
+*:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.header__wrapper {
+  background-color: #222323;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 15px;
+}
+
+.header__nav_logo {
+  width: 168px;
+  height: 40px;
+}
+
+.header__left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__right-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 480px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__menu_link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.header__menu_link:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.header__social-media {
+  width: 135px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
+.header__social-media_link {
+  color: #ffffff;
+  font-size: 20px;
+  border: 1px solid;
+  padding: 5px;
+  border-color: #ffffff;
+}
+
+.header__social-media_link:hover {
+  color: #222323;
+  background-color: #fff;
+}
+
+.header__banner {
+  background-image: url("../img/header-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 1920px;
+  padding: 210px 0;
+}
+
+.header__banner_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header__banner_subtitle {
+  font-family: "Bebas Neue", sans-serif;
+  color: rgba(34, 35, 35, 0.46);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.header__banner_title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 124px;
+  color: #222323;
+  font-weight: 400;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 45px;
+}
+
+.header__banner_title span {
+  color: #f40106;
+}
+
+.header__banner_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  width: 160px;
+  height: 60px;
+  background-color: #f40106;
+  font-weight: 600;
+}
+
+.header__banner_button:hover {
+  background-color: #222323;
+}
+
+.main {
+  padding: 120px 0 60px;
+}
+
+.main__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 270px;
+  height: 374px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 220px;
+}
+
+.main__card:first-child {
+  width: 570px;
+  background-image: url("../img/new-arrivals-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main__card:nth-child(2) {
+  background-image: url("../img/trainers-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.main__card:last-child {
+  background-image: url("../img/hot-sale-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.main__card_title {
+  color: #222323;
+  font-size: 52px;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  border-bottom: 2px solid #f40106;
+  padding-bottom: 8px;
+}
+
+.main__card_title span {
+  color: #f40106;
+}
+
+.main__card_link {
+  font-size: 14px;
+  color: #222323;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 40px;
+}
+
+.main__card_link:hover {
+  text-decoration: underline;
+}
+
+.why-choose-us {
+  padding: 50px 0 120px;
+}
+
+.why-choose-us__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.why-choose-us__title {
+  font-family: "Bebas Neue", sans-serif;
+  color: #222323;
+  font-size: 52px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.why-choose-us__title span {
+  color: #f40106;
+}
+
+.why-choose-us__subtitle {
+  font-size: 20px;
+  color: #717474;
+  margin: 0;
+  margin-bottom: 45px;
+  font-weight: 400;
+}
+
+.why-choose-us__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.why-choose-us__cards_item {
+  width: 258px;
+  height: 266px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 2px solid #e0e0e0;
+}
+
+.why-choose-us__cards_item svg {
+  width: 50px;
+  height: 50px;
+  color: #9b9b9b;
+}
+
+.why-choose-us__cards_title {
+  font-size: 24px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #222323;
+  margin: 0;
+}
+
+.why-choose-us__cards_text {
+  font-size: 16px;
+  color: #717474;
+  text-align: center;
+  height: 74px;
+  width: 225px;
+  margin: 0;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=index.css.map */
