@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 auto;
   font-family: "PT Sans", sans-serif;
@@ -19,6 +23,7 @@ li {
 .container {
   margin: 0 auto;
   max-width: 1200px;
+  padding: 0 15px 0 15px;
 }
 
 .header__wrapper {
@@ -44,7 +49,6 @@ li {
 
 .header__nav_logo {
   width: 168px;
-  height: 40px;
 }
 
 .header__left-block {
@@ -109,7 +113,7 @@ li {
 }
 
 .header__social-media {
-  width: 135px;
+  max-width: 135px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,14 +128,13 @@ li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0;
+  margin: 0;
 }
 
 .header__social-media_link {
   color: #ffffff;
   font-size: 20px;
-  border: 1px solid;
-  padding: 5px;
-  border-color: #ffffff;
+  padding: 3px;
 }
 
 .header__social-media_link:hover {
@@ -241,7 +244,7 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 270px;
+  width: 22.5%;
   height: 374px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -250,7 +253,7 @@ li {
 }
 
 .main__card:first-child {
-  width: 570px;
+  width: 47.5%;
   background-image: url("../img/new-arrivals-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -259,13 +262,13 @@ li {
 .main__card:nth-child(2) {
   background-image: url("../img/trainers-bg.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .main__card:last-child {
   background-image: url("../img/hot-sale-bg.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .main__card_title {
@@ -335,20 +338,11 @@ li {
 }
 
 .why-choose-us__cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .why-choose-us__cards_item {
@@ -390,5 +384,154 @@ li {
   width: 225px;
   margin: 0;
   margin-top: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__banner {
+    padding: 100px 0;
+  }
+  .main {
+    padding: 60px 0 30px;
+  }
+  .why-choose-us__cards {
+    grid-gap: 50px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .header__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 400px;
+  }
+  .header__social-media {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__social-media_link {
+    border: none;
+  }
+  .header__banner {
+    padding: 50px 0;
+  }
+  .header__banner_title {
+    font-size: 95px;
+  }
+  .main {
+    padding: 30px 0 15px;
+  }
+  .main__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main__card {
+    width: 85%;
+    margin-bottom: 30px;
+  }
+  .main__card:first-child {
+    width: 85%;
+  }
+  .main__card:last-child {
+    margin-bottom: 0;
+  }
+  .why-choose-us {
+    padding: 30px 0 60px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header__menu {
+    max-width: 300px;
+  }
+  .header__banner {
+    padding: 50px 0;
+  }
+  .header__banner_title {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header__menu {
+    max-width: 200px;
+  }
+  .why-choose-us__cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__menu {
+    max-width: 150px;
+  }
+  .header__nav_logo {
+    width: 100px;
+  }
+  .header__banner_content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__banner_title {
+    text-align: center;
+    font-size: 60px;
+  }
+  .why-choose-us {
+    padding-top: 20px;
+  }
+  .why-choose-us__title {
+    margin-bottom: 15px;
+  }
+  .why-choose-us__subtitle {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .why-choose-us__cards {
+    grid-gap: 20px;
+  }
+  .contacts__map iframe {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__nav_logo {
+    width: 75px;
+  }
+  .header__menu {
+    max-width: 100px;
+    padding: 0;
+  }
+  .header__banner {
+    padding: 20px 0;
+  }
+  .header__banner_title {
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+  .header__banner_subtitle {
+    margin-bottom: 10px;
+  }
+  .main__card {
+    height: 250px;
+  }
+  .why-choose-us__subtitle {
+    font-size: 16px;
+  }
+  .why-choose-us__cards {
+    grid-gap: 20px;
+  }
+  .contacts__map iframe {
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
