@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sport clothes store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
@@ -16,34 +18,34 @@
 
 <body>
     <header class="header">
-        <div class="header__wrapper">
-            <div class="container">
-                <nav class="header__nav">
-                    <div class="header__left-block">
-                        <a href="#header">
-                            <img src="img/logo.svg" alt="Sport clothes store logo" class="header__nav_logo">
-                        </a>
-                        <ul class="header__menu">
-                            <li><a href="#about-us" class="header__menu_link">About us</a></li>
-                            <li><a href="#mid-season-sale" class="header__menu_link">Sale</a></li>
-                            <li><a href="#main-collection" class="header__menu_link">Collection</a></li>
-                            <li><a href="#" class="header__menu_link">Blog</a></li>
-                            <li><a href="#contacts" class="header__menu_link">Contact us</a></li>
-                        </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid navbar__wrapper container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.svg" alt="Sport clothes store logo" class="header__logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbar__menu" id="navbarNavAltMarkup">
+                    <div class="navbar-nav navbar__menu_wrapper ">
+                        <a class="nav-link navbar__menu_link" aria-current="page" href="#about-us">About us</a>
+                        <a class="nav-link navbar__menu_link" href="#mid-season-sale">Sale</a>
+                        <a class="nav-link navbar__menu_link" href="#main-collection">Collection</a>
+                        <a class="nav-link navbar__menu_link" href="#">Blog</a>
+                        <a class="nav-link navbar__menu_link" href="#contacts">Contact us</a>
                     </div>
-                    <div class="header__right-block">
-                        <ul class="header__social-media">
-                            <li><a href="#" class="header__social-media_link"><i class="fab fa-facebook-square"></i></a>
-                            </li>
-                            <li><a href="#" class="header__social-media_link"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <li><a href="#" class="header__social-media_link"><i class="fab fa-youtube-square"></i></a>
-                            </li>
-                        </ul>
+                    <div class="navbar__social-media">
+                        <div class="navbar__social-media_wrapper">
+                            <a href="#" class="navbar__social-media_link"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#" class="navbar__social-media_link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="navbar__social-media_link"><i class="fab fa-youtube-square"></i></a>
+                        </div>
                     </div>
-                </nav>
+                </div>
             </div>
-        </div>
+        </nav>
         <div class="header__banner">
             <div class="container">
                 <div class="header__banner_content">
@@ -505,6 +507,9 @@
             <p class="footer__copyright">all rights reserved</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

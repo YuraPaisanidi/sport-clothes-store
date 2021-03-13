@@ -1,9 +1,10 @@
 $titleFont: "Bebas Neue", sans-serif
 $mainFont: "PT Sans", sans-serif
 $accentColor: #f40106
-$darkColor: #222323
+$bgColor: #222323
+$menuLinksColor: #ffffff
 
-html
+root
     scroll-behavior: smooth
 
 body
@@ -24,72 +25,24 @@ li
     max-width: 1200px
     padding: 0 15px 0 15px
 
+.bg-dark
+    background-color: $bgColor
+
+.nav-link
+    color: #ffffff !important
+
 .header
 
     &__wrapper
-        background-color: $darkColor
 
-    &__nav
-        display: flex
-        flex-direction: row
-        align-items: center
-        justify-content: space-between
-        padding: 20px 15px
-
-        &_logo
-            width: 168px
-
-    &__left-block
-        display: flex
-        flex-direction: row
-        align-items: center
-        justify-content: space-between
-
-    &__right-block
-        display: flex
-        flex-direction: row
-        align-items: center
-        justify-content: space-between
-
-    &__menu
-        display: flex
-        flex-direction: row
-        align-items: center
-        width: 480px
-        justify-content: space-between
-
-        &_link
-            text-decoration: none
-            color: #ffffff
-            font-size: 16px
-            font-weight: 700
-            padding-bottom: 5px
-
-            &:hover
-                border-bottom: 2px solid #fff
-
-    &__social-media
-        max-width: 135px
-        display: flex
-        align-items: center
-        flex-direction: row
-        justify-content: space-between
-        padding: 0
-        margin: 0
-
-        &_link
-            color: #ffffff
-            font-size: 20px
-            padding: 3px
-
-            &:hover
-                color: $darkColor
-                background-color: #fff
+    &__logo
+        width: 168px
 
     &__banner
         background-image: url('../img/header-background.jpg')
         background-repeat: no-repeat
         background-size: cover
+        background-position: center
         padding: 210px 0
 
         &_content
@@ -107,7 +60,7 @@ li
         &_title
             font-family: $titleFont
             font-size: 124px
-            color: $darkColor
+            color: $bgColor
             font-weight: 400
             line-height: 1.0
             margin: 0
@@ -130,7 +83,45 @@ li
             font-weight: 600
 
             &:hover
-                background-color: $darkColor
+                background-color: $bgColor
+
+.navbar
+
+    &__menu
+        display: flex
+        align-items: center
+        justify-content: space-around
+        padding: 30px 15px
+
+        &_wrapper
+            display: flex
+            flex: 1
+            justify-content: space-between
+            min-height: 42px
+
+        &_link
+            text-decoration: none
+            color: $menuLinksColor
+            font-size: 16px
+            font-weight: 700
+
+            &:hover
+                border-bottom: 2px solid $menuLinksColor
+
+    &__social-media
+        display: flex
+        flex: 1
+        justify-content: flex-end
+
+        &_wrapper
+            display: flex
+            justify-content: space-between
+            width: 75px
+
+        &_link
+
+            i
+                color: $menuLinksColor
 
 .main
     padding: 120px 0 60px
@@ -157,19 +148,22 @@ li
             background-image: url('../img/new-arrivals-bg.jpg')
             background-repeat: no-repeat
             background-size: cover
+            background-position: center
 
         &:nth-child(2)
             background-image: url('../img/trainers-bg.png')
             background-repeat: no-repeat
             background-size: cover
+            background-position: center
 
         &:last-child
             background-image: url('../img/hot-sale-bg.png')
             background-repeat: no-repeat
             background-size: cover
+            background-position: center
 
         &_title
-            color: $darkColor
+            color: $bgColor
             font-size: 52px
             margin: 0
             font-family: $titleFont
@@ -181,7 +175,7 @@ li
 
         &_link
             font-size: 14px
-            color: $darkColor
+            color: $bgColor
             text-decoration: none
             font-weight: 600
             padding-bottom: 40px
@@ -200,7 +194,7 @@ li
 
     &__title
         font-family: $titleFont
-        color: $darkColor
+        color: $bgColor
         font-size: 52px
         font-weight: 400
         margin: 0
@@ -248,7 +242,7 @@ li
         &_title
             font-size: 24px
             font-family: $titleFont
-            color: $darkColor
+            color: $bgColor
             margin: 0
 
         &_text
@@ -277,24 +271,19 @@ li
             grid-gap: 50px
             grid-template-columns: 1fr 1fr
 
-@media screen and ( max-width: 980px )
+@media screen and ( max-width: 992px )
     .header
-
-        &__menu
-            flex-direction: column
-            max-width: 400px
-
-        &__social-media
-            flex-direction: column
-
-            &_link
-                border: none
 
         &__banner
             padding: 50px 0
 
             &_title
                 font-size: 95px
+
+    .navbar__menu
+        align-items: center
+        flex-direction: column
+        text-align: center
 
     .main
         padding: 30px 0 15px
@@ -315,11 +304,8 @@ li
     .why-choose-us
         padding: 30px 0 60px
 
-@media screen and ( max-width: 800px  )
+@media screen and ( max-width: 768px  )
     .header
-
-        &__menu
-            max-width: 300px
 
         &__banner
             padding: 50px 0
@@ -334,7 +320,7 @@ li
             max-width: 200px
 
     .why-choose-us
-        
+
         &__cards
             grid-template-columns: 1fr
 
@@ -348,7 +334,7 @@ li
 
             &_logo
                 width: 100px
-        
+
         &__banner
 
             &_content
@@ -370,7 +356,6 @@ li
 
         &__cards
             grid-gap: 20px
-                
 
     .contacts
 
@@ -378,7 +363,7 @@ li
 
             iframe
                 width: 300px
-    
+
 @media screen and ( max-width: 320px )
     .header
 
@@ -397,7 +382,7 @@ li
             &_title
                 font-size: 50px
                 margin-bottom: 25px
-            
+
             &_subtitle
                 margin-bottom: 10px
 
@@ -413,12 +398,10 @@ li
 
         &__cards
             grid-gap: 20px
-                
-    
+
     .contacts
 
         &__map
 
             iframe
                 width: 300px
-    

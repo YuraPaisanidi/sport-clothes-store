@@ -1,4 +1,4 @@
-html {
+root {
   scroll-behavior: smooth;
 }
 
@@ -26,126 +26,23 @@ li {
   padding: 0 15px 0 15px;
 }
 
-.header__wrapper {
+.bg-dark {
   background-color: #222323;
 }
 
-.header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 20px 15px;
+.nav-link {
+  color: #ffffff !important;
 }
 
-.header__nav_logo {
+.header__logo {
   width: 168px;
-}
-
-.header__left-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.header__right-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.header__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 480px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.header__menu_link {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  padding-bottom: 5px;
-}
-
-.header__menu_link:hover {
-  border-bottom: 2px solid #fff;
-}
-
-.header__social-media {
-  max-width: 135px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0;
-  margin: 0;
-}
-
-.header__social-media_link {
-  color: #ffffff;
-  font-size: 20px;
-  padding: 3px;
-}
-
-.header__social-media_link:hover {
-  color: #222323;
-  background-color: #fff;
 }
 
 .header__banner {
   background-image: url("../img/header-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding: 210px 0;
 }
 
@@ -210,6 +107,68 @@ li {
   background-color: #222323;
 }
 
+.navbar__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px 15px;
+}
+
+.navbar__menu_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 42px;
+}
+
+.navbar__menu_link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.navbar__menu_link:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+.navbar__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar__social-media_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 75px;
+}
+
+.navbar__social-media_link i {
+  color: #ffffff;
+}
+
 .main {
   padding: 120px 0 60px;
 }
@@ -257,18 +216,21 @@ li {
   background-image: url("../img/new-arrivals-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .main__card:nth-child(2) {
   background-image: url("../img/trainers-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .main__card:last-child {
   background-image: url("../img/hot-sale-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .main__card_title {
@@ -400,28 +362,22 @@ li {
   }
 }
 
-@media screen and (max-width: 980px) {
-  .header__menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    max-width: 400px;
-  }
-  .header__social-media {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .header__social-media_link {
-    border: none;
-  }
+@media screen and (max-width: 992px) {
   .header__banner {
     padding: 50px 0;
   }
   .header__banner_title {
     font-size: 95px;
+  }
+  .navbar__menu {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
   }
   .main {
     padding: 30px 0 15px;
@@ -447,10 +403,7 @@ li {
   }
 }
 
-@media screen and (max-width: 800px) {
-  .header__menu {
-    max-width: 300px;
-  }
+@media screen and (max-width: 768px) {
   .header__banner {
     padding: 50px 0;
   }
