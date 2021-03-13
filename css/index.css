@@ -162,11 +162,16 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 75px;
+  width: 90px;
 }
 
 .navbar__social-media_link i {
   color: #ffffff;
+  font-size: 25px;
+}
+
+.navbar__social-media_link i:hover {
+  color: #f40106;
 }
 
 .main {
