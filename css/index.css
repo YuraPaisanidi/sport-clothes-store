@@ -34,6 +34,18 @@ a:hover {
   color: #ffffff !important;
 }
 
+.btn-check:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+}
+
+.btn-primary:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+}
+
 .header__logo {
   width: 168px;
 }
@@ -545,6 +557,14 @@ a:hover {
 .mid-season-sale__item_button:hover {
   color: #ffffff;
   background-color: #f40106;
+}
+
+.mid-season-sale__item_button:focus {
+  background-color: #f40106;
+  outline: none;
+  border: 0;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
 }
 
 .card-body {

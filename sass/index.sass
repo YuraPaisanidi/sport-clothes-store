@@ -32,6 +32,16 @@ a:hover
 .nav-link
     color: #ffffff !important
 
+.btn-check
+    &:focus
+        outline: none
+        box-shadow: 0 0 0 0
+
+.btn-primary
+    &:focus
+        outline: none
+        box-shadow: 0 0 0 0
+
 .header
 
     &__wrapper
@@ -344,14 +354,14 @@ a:hover
         grid-template-rows: 1fr
         grid-gap: 30px
         width: 100%
-        padding: 0 30px 0 
+        padding: 0 30px 0
 
     &__item
         border: none
         display: flex
         flex-direction: column
         flex: 1
-            
+
         &_image
             margin-bottom: 24px
 
@@ -382,10 +392,14 @@ a:hover
                 color: $menuLinksColor
                 background-color: $accentColor
 
+            &:focus
+                background-color: $accentColor
+                outline: none
+                border: 0
+                box-shadow: 0
 
 .card-body
     padding: 0
-
 
 // Responsive
 
@@ -485,8 +499,8 @@ a:hover
         padding-bottom: 40px
 
         &__cards
-            grid-template-columns: 1fr 1fr 
-            
+            grid-template-columns: 1fr 1fr
+
 @media screen and ( max-width: 480px )
     .header
 
@@ -591,12 +605,12 @@ a:hover
 
         &__text
             font-size: 16px
-    
+
     .mid-season-sale
 
         &__title
             font-size: 40px
             margin-bottom: 10px
-        
+
         &__subtitle
             font-size: 16px
