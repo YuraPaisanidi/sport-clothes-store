@@ -525,6 +525,13 @@ a:hover {
 .mid-season-sale__item_name {
   font-size: 18px;
   color: #717474;
+  text-decoration: none;
+}
+
+.mid-season-sale__item_name:hover {
+  color: #717474;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .mid-season-sale__item_price {
