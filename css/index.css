@@ -7,12 +7,12 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 
-img {
-  max-width: 300px;
-}
-
 li {
   list-style-type: none;
+}
+
+a:hover {
+  color: #ffffff;
 }
 
 *:hover {
@@ -358,7 +358,6 @@ li {
   display: grid;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
-  max-height: 681px;
 }
 
 .about-us__bg {
@@ -408,6 +407,10 @@ li {
   margin-bottom: 20px;
 }
 
+.about-us__title span {
+  color: #f40106;
+}
+
 .about-us__text {
   font-size: 20px;
   color: #ffffff;
@@ -433,6 +436,121 @@ li {
   color: #ffffff;
 }
 
+.mid-season-sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 110px 0 120px;
+}
+
+.mid-season-sale__title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mid-season-sale__title {
+  font-size: 52px;
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 30px;
+}
+
+.mid-season-sale__title span {
+  color: #f40106;
+}
+
+.mid-season-sale__subtitle {
+  font-size: 20px;
+  color: #717474;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mid-season-sale__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 30px;
+  width: 100%;
+  padding: 0 30px 0;
+}
+
+.mid-season-sale__item {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mid-season-sale__item_image {
+  margin-bottom: 24px;
+}
+
+.mid-season-sale__item_name {
+  font-size: 18px;
+  color: #717474;
+}
+
+.mid-season-sale__item_price {
+  color: #f40106;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.mid-season-sale__item_button {
+  width: 125px;
+  height: 50px;
+  background-color: #222323;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0;
+}
+
+.mid-season-sale__item_button:hover {
+  color: #ffffff;
+  background-color: #f40106;
+}
+
+.card-body {
+  padding: 0;
+}
+
 @media screen and (max-width: 1200px) {
   .header__banner {
     padding: 100px 0;
@@ -444,6 +562,15 @@ li {
     grid-gap: 50px;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  .mid-season-sale {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+  .mid-season-sale__cards {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 80px;
   }
 }
 
@@ -489,8 +616,10 @@ li {
   .about-us {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+  }
+  .about-us__item {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .about-us__bg {
     display: none;
@@ -516,6 +645,14 @@ li {
   }
   .about-us__item {
     padding: 50px 30px 60px 30px;
+  }
+  .mid-season-sale {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  .mid-season-sale__cards {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -553,6 +690,10 @@ li {
   }
   .about-us__item_wrapper {
     height: 600px;
+  }
+  .mid-season-sale__cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
@@ -593,6 +734,13 @@ li {
     font-size: 40px;
   }
   .about-us__text {
+    font-size: 16px;
+  }
+  .mid-season-sale__title {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .mid-season-sale__subtitle {
     font-size: 16px;
   }
 }

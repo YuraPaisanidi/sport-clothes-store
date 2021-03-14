@@ -69,7 +69,6 @@
                 </article>
                 <article class="main__card">
                     <p class="main__card_title">Hot sale<span>.</span></p>
-                    <hr>
                     <a href="#main-collection" class="main__card_link">Shop collection</a>
                 </article>
             </div>
@@ -265,7 +264,7 @@
         <div class="about-us__bg"></div>
         <div class="about-us__item">
             <article class="about-us__item_wrapper">
-                <h2 class="about-us__title">About us</h2>
+                <h2 class="about-us__title">About us<span>.</span></h2>
                 <p class="about-us__text">Workout is an American fitness store created by fitness geeks for those who
                     love sport and try to keep fit.</p>
                 <p class="about-us__text">At Workout, we know that great results do not come from standing still. We all
@@ -284,44 +283,56 @@
         </div>
     </section>
     <section id="mid-season-sale" class="mid-season-sale">
-        <h2 class="mid-season-sale__title">Mid-season sale</h2>
+        <div class="mid-season-sale__title-block container">
+            <h2 class="mid-season-sale__title">Mid-season sale<span>.</span></h2>
         <p class="mid-season-sale__subtitle">Shop clothes and trainers that are chosen by thousands of our clients.
             Click on the image to see the product details and click Add to Cart to make the purchase. We are committed
             to give you the best buying experience!</p>
+        </div>
         <div class="mid-season-sale__cards">
-            <article class="mid-season-sale__item">
-                <img src="img/trainers.jpg" alt="Trainers" class="mid-season-sale__item_image">
-                <p class="mid-season-sale__item_name">Adidas Cloudfoam Trainers</p>
-                <p class="mid-season-sale__item_price">$60,00USD</p>
-                <button class="mid-season-sale__item_button">Add to Cart</button>
-            </article>
-            <article class="mid-season-sale__item">
-                <img src="img/shorts.jpg" alt="Shorts" class="mid-season-sale__item_image">
-                <p class="mid-season-sale__item_name">Reebok Workout Shorts</p>
-                <p class="mid-season-sale__item_price">$25,00USD</p>
-                <button class="mid-season-sale__item_button">Add to Cart</button>
-            </article>
-            <article class="mid-season-sale__item">
-                <img src="img/sneakers.jpg" alt="Sneakers" class="mid-season-sale__item_image">
-                <p class="mid-season-sale__item_name">Puma Fitness Shoes in Grey</p>
-                <p class="mid-season-sale__item_price">$60,00USD</p>
-                <button class="mid-season-sale__item_button">Add to Cart</button>
-            </article>
-            <article class="mid-season-sale__item">
-                <img src="img/top.jpg" alt="Top" class="mid-season-sale__item_image">
-                <p class="mid-season-sale__item_name">Puma Essential Tank Top</p>
-                <p class="mid-season-sale__item_price">$43,00USD</p>
-                <button class="mid-season-sale__item_button">Add to Cart</button>
-            </article>
-            <article class="mid-season-sale__item">
-                <img src="img/polo.jpg" alt="Polo" class="mid-season-sale__item_image">
-                <p class="mid-season-sale__item_name">Nike Classic Polo T-Shirt</p>
-                <p class="mid-season-sale__item_price">$23,00USD</p>
-                <button class="mid-season-sale__item_button">Add to Cart</button>
-            </article>
+            <div class="card mid-season-sale__item">
+                <img src="img/trainers.jpg" class="card-img-top mid-season-sale__item_image" alt="Trainers">
+                <div class="card-body">
+                  <h5 class="card-title mid-season-sale__item_name ">Adidas Cloudfoam Trainers</h5>
+                  <p class="card-text mid-season-sale__item_price">$60,00USD</p>
+                  <a href="#" class="btn btn-primary mid-season-sale__item_button">Add to Cart</a>
+                </div>
+              </div>
+            <div class="card mid-season-sale__item">
+                <img src="img/shorts.jpg" class="card-img-top mid-season-sale__item_image" alt="Shorts">
+                <div class="card-body">
+                  <h5 class="card-title mid-season-sale__item_name ">Reebok Workout Shorts</h5>
+                  <p class="card-text mid-season-sale__item_price">$25,00USD</p>
+                  <a href="#" class="btn btn-primary mid-season-sale__item_button">Add to Cart</a>
+                </div>
+              </div>
+            <div class="card mid-season-sale__item">
+                <img src="img/sneakers.jpg" class="card-img-top mid-season-sale__item_image" alt="Sneakers">
+                <div class="card-body">
+                  <h5 class="card-title mid-season-sale__item_name ">Puma Fitness Shoes in Grey</h5>
+                  <p class="card-text mid-season-sale__item_price">$60,00USD</p>
+                  <a href="#" class="btn btn-primary mid-season-sale__item_button">Add to Cart</a>
+                </div>
+              </div>
+            <div class="card mid-season-sale__item">
+                <img src="img/top.jpg" class="card-img-top mid-season-sale__item_image" alt="Top">
+                <div class="card-body">
+                  <h5 class="card-title mid-season-sale__item_name ">Puma Essential Tank Top</h5>
+                  <p class="card-text mid-season-sale__item_price">$43,00USD</p>
+                  <a href="#" class="btn btn-primary mid-season-sale__item_button">Add to Cart</a>
+                </div>
+              </div>
+            <div class="card mid-season-sale__item">
+                <img src="img/polo.jpg" class="card-img-top mid-season-sale__item_image" alt="Polo">
+                <div class="card-body">
+                  <h5 class="card-title mid-season-sale__item_name ">Nike Classic Polo T-Shirt</h5>
+                  <p class="card-text mid-season-sale__item_price">$23,00USD</p>
+                  <a href="#" class="btn btn-primary mid-season-sale__item_button">Add to Cart</a>
+                </div>
+              </div>
         </div>
     </section>
-    <section class="get-your-discount">
+    <!-- <section class="get-your-discount">
         <div class="get-your-discount__banner">
             <p class="get-your-discount__subtitle">Sale of the month</p>
             <h2 class="get-your-discount__title">get your discount</h2>
@@ -378,8 +389,8 @@
                 </article>
             </div>
         </div>
-    </section>
-    <section class="deal-of-the-month">
+    </section> -->
+    <!-- <section class="deal-of-the-month">
         <article class="deal-of-the-month__item">
             <h2 class="deal-of-the-month__title">Deal of the month</h2>
             <p class="deal-of-the-month__subtitle">puma sports bra <span>$50 </span><strike>$70</strike></p>
@@ -507,7 +518,7 @@
             <p class="footer__copyright">created by</p>
             <p class="footer__copyright">all rights reserved</p>
         </div>
-    </footer>
+    </footer> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>

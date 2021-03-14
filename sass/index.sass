@@ -3,6 +3,7 @@ $mainFont: "PT Sans", sans-serif
 $accentColor: #f40106
 $bgColor: #222323
 $menuLinksColor: #ffffff
+$subtitleColor: #717474
 
 root
     scroll-behavior: smooth
@@ -11,11 +12,11 @@ body
     margin: 0 auto
     font-family: $mainFont
 
-img
-    max-width: 300px
-
 li
     list-style-type: none
+
+a:hover
+    color: $menuLinksColor
 
 *:hover
     transition: 0.5s
@@ -219,7 +220,7 @@ li
 
     &__subtitle
         font-size: 20px
-        color: #717474
+        color: $subtitleColor
         margin: 0
         margin-bottom: 45px
         font-weight: 400
@@ -261,7 +262,6 @@ li
 .about-us
     display: grid
     grid-template-columns: 50% 50%
-    max-height: 681px
 
     &__bg
         background-image: url('../img/about-us.jpg')
@@ -291,6 +291,9 @@ li
         font-family: $titleFont
         margin-bottom: 20px
 
+        span
+            color: $accentColor
+
     &__text
         font-size: 20px
         color: $menuLinksColor
@@ -310,6 +313,80 @@ li
                 &:hover
                     color: $menuLinksColor
 
+.mid-season-sale
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 110px 0 120px
+
+    &__title-block
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__title
+        font-size: 52px
+        font-family: $titleFont
+        margin-bottom: 30px
+
+        span
+            color: $accentColor
+
+    &__subtitle
+        font-size: 20px
+        color: #717474
+        text-align: center
+        margin-bottom: 30px
+
+    &__cards
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+        grid-template-rows: 1fr
+        grid-gap: 30px
+        width: 100%
+        padding: 0 30px 0 
+
+    &__item
+        border: none
+        display: flex
+        flex-direction: column
+        flex: 1
+            
+        &_image
+            margin-bottom: 24px
+
+        &_name
+            font-size: 18px
+            color: $subtitleColor
+
+        &_price
+            color: $accentColor
+            font-size: 18px
+            font-weight: 600
+
+        &_button
+            width: 125px
+            height: 50px
+            background-color: $bgColor
+            text-align: center
+            text-decoration: none
+            border: none
+            font-size: 15px
+            font-weight: 600
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 0
+
+            &:hover
+                color: $menuLinksColor
+                background-color: $accentColor
+
+
+.card-body
+    padding: 0
+
+
 // Responsive
 
 @media screen and ( max-width: 1200px )
@@ -326,6 +403,14 @@ li
         &__cards
             grid-gap: 50px
             grid-template-columns: 1fr 1fr
+
+    .mid-season-sale
+        padding-top: 70px
+        padding-bottom: 80px
+
+        &__cards
+            grid-template-columns: 1fr 1fr 1fr
+            grid-row-gap: 80px
 
 @media screen and ( max-width: 992px )
     .header
@@ -362,7 +447,10 @@ li
 
     .about-us
         grid-template-columns: 1fr
-        grid-template-rows: 1fr 1fr
+
+        &__item
+            padding-top: 80px
+            padding-bottom: 80px
 
         &__bg
             display: none
@@ -392,6 +480,13 @@ li
         &__item
             padding: 50px 30px 60px 30px
 
+    .mid-season-sale
+        padding-top: 50px
+        padding-bottom: 40px
+
+        &__cards
+            grid-template-columns: 1fr 1fr 
+            
 @media screen and ( max-width: 480px )
     .header
 
@@ -438,6 +533,11 @@ li
 
             &_wrapper
                 height: 600px
+
+    .mid-season-sale
+
+        &__cards
+            grid-template-columns: 1fr
 
 @media screen and ( max-width: 320px )
     .header
@@ -490,4 +590,13 @@ li
             font-size: 40px
 
         &__text
+            font-size: 16px
+    
+    .mid-season-sale
+
+        &__title
+            font-size: 40px
+            margin-bottom: 10px
+        
+        &__subtitle
             font-size: 16px
