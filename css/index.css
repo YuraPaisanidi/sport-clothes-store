@@ -571,6 +571,163 @@ a:hover {
   padding: 0;
 }
 
+.get-your-discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.get-your-discount__banner {
+  background-image: url(../img/discount-bg.png);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0 210px;
+  margin-bottom: 30px;
+}
+
+.get-your-discount__banner_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.get-your-discount__banner_subtitle {
+  font-size: 24px;
+  font-family: "Bebas Neue", sans-serif;
+  color: rgba(255, 255, 255, 0.62);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.get-your-discount__banner_title {
+  font-size: 124px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ffffff;
+}
+
+.get-your-discount__banner_title span {
+  color: #f40106;
+}
+
+.get-your-discount__banner_button {
+  width: 160px;
+  height: 61px;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #222323;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 700;
+}
+
+.get-your-discount__banner_button:hover {
+  background-color: #222323;
+  color: #ffffff;
+}
+
+.get-your-discount__cards {
+  width: 100%;
+}
+
+.get-your-discount__cards_wrapper {
+  width: 100%;
+  padding: 0 30px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+}
+
+.get-your-discount__cards_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 200px 30px 30px 30px;
+}
+
+.get-your-discount__cards_item:first-child {
+  background-image: url(../img/discount-tshirt.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.get-your-discount__cards_item:nth-child(2) {
+  background-image: url(../img/discount-jackets.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.get-your-discount__cards_item:last-child {
+  background-image: url(../img/discount-trainers.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.get-your-discount__cards_text {
+  height: 107px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(34, 35, 35, 0.89);
+  width: 100%;
+  padding: 15px 0 15px;
+}
+
+.get-your-discount__cards_title {
+  font-size: 36px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ffffff;
+  margin: 0;
+}
+
+.get-your-discount__cards_link {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.get-your-discount__cards_link:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1200px) {
   .header__banner {
     padding: 100px 0;
@@ -591,6 +748,10 @@ a:hover {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 80px;
+  }
+  .get-your-discount__banner_content {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -644,6 +805,9 @@ a:hover {
   .about-us__bg {
     display: none;
   }
+  .get-your-discount__cards_item {
+    padding: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -652,6 +816,17 @@ a:hover {
   }
   .header__banner_title {
     font-size: 90px;
+  }
+  .get-your-discount__banner_title {
+    font-size: 90px;
+  }
+  .get-your-discount__cards_wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
+  .get-your-discount__cards_item {
+    padding: 120px 30px 30px 30px;
   }
 }
 
@@ -673,6 +848,9 @@ a:hover {
   .mid-season-sale__cards {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  .get-your-discount__banner {
+    padding: 150px 0 150px;
   }
 }
 
@@ -715,6 +893,14 @@ a:hover {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .get-your-discount__banner {
+    padding: 100px 0 100px;
+  }
+  .get-your-discount__banner_content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -734,6 +920,11 @@ a:hover {
   }
   .header__banner_subtitle {
     margin-bottom: 10px;
+  }
+  .header__banner_button {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
   }
   .main__card {
     height: 350px;
@@ -762,6 +953,35 @@ a:hover {
   }
   .mid-season-sale__subtitle {
     font-size: 16px;
+  }
+  .mid-season-sale__item_button {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .get-your-discount__banner {
+    padding: 60px 0 60px 0;
+  }
+  .get-your-discount__banner_button {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .get-your-discount__banner_title {
+    font-size: 50px;
+  }
+  .get-your-discount__cards_wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .get-your-discount__cards_item {
+    padding: 30px 15px 30px 15px;
+  }
+  .get-your-discount__cards_text {
+    height: 80px;
+  }
+  .get-your-discount__cards_title {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=index.css.map */
