@@ -666,6 +666,7 @@ a:hover {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 30px;
+  margin-bottom: 25px;
 }
 
 .get-your-discount__cards_item {
@@ -733,6 +734,165 @@ a:hover {
 
 .get-your-discount__cards_link:hover {
   text-decoration: underline;
+}
+
+.main-collection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 90px 0 120px;
+}
+
+.main-collection__title {
+  font-size: 52px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #222323;
+  margin-bottom: 35px;
+}
+
+.main-collection__subtitle {
+  font-size: 20px;
+  color: #717474;
+}
+
+.main-collection__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-collection__tabs_buttons {
+  width: 100%;
+  border-bottom: 1px solid #bac1c1;
+  margin-bottom: 25px;
+}
+
+.main-collection__tabs_buttons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 25px;
+  height: 100%;
+}
+
+.main-collection__tabs_link {
+  color: #717474;
+  font-size: 16px;
+  text-decoration: none;
+  height: 100%;
+}
+
+.main-collection__tabs_link:hover {
+  color: #323333;
+  cursor: pointer;
+}
+
+.main-collection__tabs_content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.main-collection__tabs_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-collection__tabs_image {
+  max-width: 370px;
+  margin-bottom: 24px;
+}
+
+.main-collection__tabs_name {
+  font-size: 18px;
+  color: #717474;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.main-collection__tabs_name:hover {
+  color: #717474;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.main-collection__tabs_price {
+  color: #f40106;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.main-collection__tabs_button {
+  width: 125px;
+  height: 50px;
+  background-color: #222323;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0;
+}
+
+.main-collection__tabs_button:hover {
+  color: #ffffff;
+  background-color: #f40106;
+}
+
+.main-collection__tabs_button:focus {
+  background-color: #f40106;
+  outline: none;
+  border: 0;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+}
+
+.active {
+  color: #f40106;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
@@ -815,6 +975,9 @@ a:hover {
   .get-your-discount__cards_item {
     padding: 20px;
   }
+  .main-collection__tabs_image {
+    max-width: 250px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -834,6 +997,23 @@ a:hover {
   }
   .get-your-discount__cards_item {
     padding: 120px 30px 30px 30px;
+  }
+  .main-collection__subtitle {
+    text-align: center;
+  }
+  .main-collection__tabs {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+  }
+  .main-collection__tabs_content {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    width: 100%;
+    grid-row-gap: 60px;
+  }
+  .main-collection__tabs_image {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -858,6 +1038,9 @@ a:hover {
   }
   .get-your-discount__banner {
     padding: 150px 0 150px;
+  }
+  .main-collection {
+    padding: 60px 0 80px;
   }
 }
 
@@ -907,6 +1090,9 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .main-collection {
+    padding: 40px 0 60px;
   }
 }
 
@@ -989,6 +1175,17 @@ a:hover {
   }
   .get-your-discount__cards_title {
     font-size: 25px;
+  }
+  .main-collection__title {
+    font-size: 40px;
+  }
+  .main-collection__subtitle {
+    font-size: 16px;
+  }
+  .main-collection__tabs_button {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=index.css.map */
