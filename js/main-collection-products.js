@@ -58,7 +58,8 @@ const productsShoesJSON = `
 ]
 `;
 
-function renderProdWomen(productsWomen){
+function renderProdWomen(){
+    const productsWomen = JSON.parse(productsWomenJSON);
     const productsContainer = document.querySelector('.main-collection__tabs_content');
     productsContainer.innerHTML = '';
     for (const product of productsWomen){
@@ -73,7 +74,8 @@ function renderProdWomen(productsWomen){
     }
 }
 
-function renderProdMen(productsMen){
+function renderProdMen(){
+    const productsMen = JSON.parse(productsMenJSON);
     const productsContainer = document.querySelector('.main-collection__tabs_content');
     productsContainer.innerHTML = '';
     for (const product of productsMen){
@@ -88,7 +90,8 @@ function renderProdMen(productsMen){
     }
 }
 
-function renderProdShoes(productsShoes){
+function renderProdShoes(){
+    const productsShoes = JSON.parse(productsShoesJSON);
     const productsContainer = document.querySelector('.main-collection__tabs_content');
     productsContainer.innerHTML = '';
     for (const product of productsShoes){
@@ -103,13 +106,13 @@ function renderProdShoes(productsShoes){
     }
 }
 
-renderProdWomen(JSON.parse(productsWomenJSON));
+renderProdWomen();
 
 const womenContBtn = document.getElementById('tab-women-button');
 const menContBtn = document.getElementById('tab-men-button');
 const shoesContBtn = document.getElementById('tab-shoes-button');
 
-womenContBtn.addEventListener('click', renderProdWomen(JSON.parse(productsWomenJSON)));
-shoesContBtn.addEventListener('click', renderProdShoes(JSON.parse(productsMenJSON)));
-menContBtn.addEventListener('click', renderProdMen(JSON.parse(productsShoesJSON)));
+womenContBtn.addEventListener('click', renderProdWomen);
+shoesContBtn.addEventListener('click', renderProdShoes);
+menContBtn.addEventListener('click', renderProdMen);
 
