@@ -1,65 +1,8 @@
-const productsWomenJSON = `
-[
-    {
-        "title": "Puma Sports Bra",
-        "price": 12.00,
-        "image": "bra.jpg"
-    },
-    {
-        "title": "Reebok Long Sleave Top",
-        "price": 18.00,
-        "image": "long-sleave.jpg"
-    },
-    {
-        "title": "Quicksilver Workout Top",
-        "price": 12.00,
-        "image": "workout-top.jpg"
-    }
-]
-`;
+const womenContBtn = document.getElementById('tab-women-button');
+const menContBtn = document.getElementById('tab-men-button');
+const shoesContBtn = document.getElementById('tab-shoes-button');
 
-const productsMenJSON = `
-[
-    {
-        "title": "Adidas Compression Tee",
-        "price": 33.00,
-        "image": "adidas-tee.jpg"
-    },
-    {
-        "title": "Reebok Fitness Jacket",
-        "price": 52.00,
-        "image": "reebok-jacket.jpg"
-    },
-    {
-        "title": "Quicksilver Tech T-Shirt",
-        "price": 21.00,
-        "image": "quicksilver-t-shirt.jpg"
-    }
-]
-`;
-
-const productsShoesJSON = `
-[
-    {
-        "title": "Nike Amanda Running Shoes",
-        "price": 120.00,
-        "image": "nike-shoes.jpg"
-    },
-    {
-        "title": "Puma Basket Shoes",
-        "price": 140.00,
-        "image": "puma-shoes.jpg"
-    },
-    {
-        "title": "Adidas Campus",
-        "price": 130.00,
-        "image": "adidas-shoes.jpg"
-    }
-]
-`;
-
-function renderProdWomen(){
-    const productsWomen = JSON.parse(productsWomenJSON);
+function renderProdWomen(productsWomen){
     const productsContainer = document.querySelector('.main-collection__tabs_content');
     productsContainer.innerHTML = '';
     for (const product of productsWomen){
@@ -72,10 +15,10 @@ function renderProdWomen(){
                 </article>
         `
     }
+    
 }
 
 function renderProdMen(){
-    const productsMen = JSON.parse(productsMenJSON);
     const productsContainer = document.querySelector('.main-collection__tabs_content');
     productsContainer.innerHTML = '';
     for (const product of productsMen){
@@ -88,10 +31,10 @@ function renderProdMen(){
                 </article>
         `
     }
+    
 }
 
 function renderProdShoes(){
-    const productsShoes = JSON.parse(productsShoesJSON);
     const productsContainer = document.querySelector('.main-collection__tabs_content');
     productsContainer.innerHTML = '';
     for (const product of productsShoes){
@@ -104,15 +47,41 @@ function renderProdShoes(){
                 </article>
         `
     }
+    womenContBtn.classList.remove('active');
+    menContBtn.classList.remove('active');
+    shoesContBtn.classList.add('active');
 }
 
-renderProdWomen();
+async function fetchAndRenderProdWomen() {
+    const response = await fetch('json/productsWomen.json');
+    const productsWomen = await response.json();
+    renderProdWomen(productsWomen);
+    womenContBtn.classList.add('active');
+    menContBtn.classList.remove('active');
+    shoesContBtn.classList.remove('active');
+}
 
-const womenContBtn = document.getElementById('tab-women-button');
-const menContBtn = document.getElementById('tab-men-button');
-const shoesContBtn = document.getElementById('tab-shoes-button');
+async function fetchAndRenderProdMen() {
+    const response = await fetch('json/productsMen.json');
+    const productsMen = await response.json();
+    renderProdWomen(productsMen);
+    womenContBtn.classList.remove('active');
+    menContBtn.classList.add('active');
+    shoesContBtn.classList.remove('active');
+}
 
-womenContBtn.addEventListener('click', renderProdWomen);
-shoesContBtn.addEventListener('click', renderProdShoes);
-menContBtn.addEventListener('click', renderProdMen);
+async function fetchAndRenderProdShoes() {
+    const response = await fetch('json/productsShoes.json');
+    const productsShoes = await response.json();
+    renderProdWomen(productsShoes);
+    womenContBtn.classList.remove('active');
+    menContBtn.classList.remove('active');
+    shoesContBtn.classList.add('active');
+}
+
+fetchAndRenderProdWomen();
+
+womenContBtn.addEventListener('click', fetchAndRenderProdWomen);
+menContBtn.addEventListener('click', fetchAndRenderProdMen);
+shoesContBtn.addEventListener('click', fetchAndRenderProdShoes);
 

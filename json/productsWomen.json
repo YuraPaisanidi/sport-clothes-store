@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Puma Sports Bra",
+        "price": 12.00,
+        "image": "bra.jpg"
+    },
+    {
+        "title": "Reebok Long Sleave Top",
+        "price": 18.00,
+        "image": "long-sleave.jpg"
+    },
+    {
+        "title": "Quicksilver Workout Top",
+        "price": 12.00,
+        "image": "workout-top.jpg"
+    }
+]

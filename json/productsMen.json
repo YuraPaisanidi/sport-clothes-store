@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Adidas Compression Tee",
+        "price": 33.00,
+        "image": "adidas-tee.jpg"
+    },
+    {
+        "title": "Reebok Fitness Jacket",
+        "price": 52.00,
+        "image": "reebok-jacket.jpg"
+    },
+    {
+        "title": "Quicksilver Tech T-Shirt",
+        "price": 21.00,
+        "image": "quicksilver-t-shirt.jpg"
+    }
+]

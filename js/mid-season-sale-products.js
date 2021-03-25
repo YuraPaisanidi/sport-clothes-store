@@ -1,35 +1,3 @@
-const productsJSON = `
-[
-    {
-        "title": "Adidas Cloudfoam Trainers",
-        "price": 60.00,
-        "image": "trainers.jpg"
-    },
-    {
-        "title": "Reebok Workout Shorts",
-        "price": 25.00,
-        "image": "shorts.jpg"
-    },
-    {
-        "title": "Puma Fitness Shoes in Grey",
-        "price": 60.00,
-        "image": "sneakers.jpg"
-    },
-    {
-        "title": "Puma Essential Tank Top",
-        "price": 43.00,
-        "image": "top.jpg"
-    },
-    {
-        "title": "Nike Classic Polo T-Shirt",
-        "price": 23.00,
-        "image": "polo.jpg"
-    }
-
-]
-`;
-
-
 function renderProducts(products) {
     const productsContainer = document.querySelector('.mid-season-sale__cards');
     productsContainer.innerHTML = '';
@@ -46,4 +14,10 @@ function renderProducts(products) {
     }
 }
 
-renderProducts(JSON.parse(productsJSON));
+async function fetchAndRenderProd() {
+    const response = await fetch('json/productsMidSeason.json');
+    const products = await response.json();
+    renderProducts(products);
+}
+
+fetchAndRenderProd();
