@@ -632,6 +632,161 @@ a:hover
     color: $accentColor
     font-weight: bold
 
+// Modal shopping cart
+
+.shopping-cart
+
+    &__icon
+        position: fixed
+        right: 50px
+        top: 85px
+        width: 50px
+        height: 50px
+        border-radius: 100px
+        z-index: 1000
+        background-color: #fff
+        display: flex
+        align-items: center
+        justify-content: center
+
+.modal-dialog
+    max-width: 970px
+
+.modal-header
+    background-color: #f7f8fa
+
+.modal-title
+    font-size: 18px
+    color: $subtitleColor
+
+.modal-body
+    display: flex
+    flex-direction: column
+    
+    &__prod
+        display: flex
+        flex-direction: column
+        margin-bottom: 15px
+        padding-bottom: 15px
+        border-bottom: 1px solid #dee2e6
+
+        &_title
+            font-size: 14px
+            font-family: $titleFont
+            color: $bgColor
+        
+        &_wrapper
+            display: flex
+            justify-content: space-between
+            width: 100%
+            align-items: center
+
+        &_item
+            display: flex 
+            align-items: center
+
+        &_image
+            width: 45px
+            height: 45px
+        
+        &_name
+            font-size: 14px
+            color: $subtitleColor
+            margin: 0
+            margin-left: 25px
+
+        &_amount
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-left: 350px
+
+            input
+                width: 50px
+                height: 30px
+                padding-left: 18px
+                color: $subtitleColor
+                border: 1px solid #dee2e6
+
+        &_price
+            color: $subtitleColor
+            font-size: 16px
+            text-transform: uppercase
+            margin: 0
+            margin-left: 25px
+            
+        &_clear
+            color: $subtitleColor
+
+            &:hover
+                cursor: pointer
+
+        &_sum
+            font-size: 18px
+            color: $subtitleColor
+            align-self: flex-end
+
+    &__form
+
+        &_title
+            font-size: 14px
+            font-family: $titleFont
+            color: $bgColor
+        
+        &_item
+            display: flex
+            flex-direction: column
+            width: 100%
+
+            label
+                color: $subtitleColor
+                font-size: 16px
+                margin-bottom: 25px
+
+            input
+                padding: 12px
+                width: 100%
+                border: 1px solid #dee2e6
+                color: $subtitleColor
+                outline: none
+                height: 45px
+                margin-top: 10px
+
+            textarea
+                display: block
+                padding: 12px
+                width: 100%
+                border: 1px solid #dee2e6
+                color: $subtitleColor
+                outline: none
+                height: 150px
+                margin-top: 10px
+                resize: none
+
+.modal-footer
+    border-top: 0
+    display: flex
+    justify-content: space-between
+
+    &__close
+        color: $subtitleColor
+        text-decoration: none
+
+        &:hover
+            color: $subtitleColor
+            text-decoration: underline
+            cursor: pointer
+
+    &__order
+        background-color: $accentColor
+        width: 85px
+        height: 50px
+        color: $menuLinksColor
+        border: none
+
+        &:hover
+            background-color: $bgColor
+
 // Responsive
 
 @media screen and ( max-width: 1200px )
@@ -721,6 +876,16 @@ a:hover
 
             &_image
                 max-width: 250px
+            
+    .modal-dialog
+        max-width: 768px
+
+    .modal-body
+
+        &__prod
+
+            &_amount
+                margin-left: 250px
 
 @media screen and ( max-width: 768px  )
     .header
@@ -763,6 +928,16 @@ a:hover
                 width: 100%
                 max-width: 100%
 
+    .modal-dialog
+        max-width: 640px
+
+    .modal-body
+
+        &__prod
+
+            &_amount
+                margin-left: 150px
+
 
 @media screen and ( max-width: 640px )
     .header
@@ -793,6 +968,17 @@ a:hover
 
     .main-collection
         padding: 60px 0 80px
+
+    .modal-dialog
+        max-width: 480px
+
+    .modal-body
+
+        &__prod
+
+            &_amount
+                margin-left: 0
+
 
 
 @media screen and ( max-width: 480px )
@@ -857,6 +1043,41 @@ a:hover
 
     .main-collection
         padding: 40px 0 60px
+
+    .modal-dialog
+        // max-width: 320px
+
+    .modal-body
+
+        &__prod
+
+            &_name
+                font-size: 12px
+
+            &_amount
+
+                input
+                    width: 35px
+                    padding-left: 12px
+
+            &_price
+                font-size: 14px
+
+            &_sum
+                font-size: 16px
+        
+        &__form
+
+            &_item
+
+                label
+                    font-size: 14px 
+
+                input
+                    font-size: 14px
+
+                textarea
+                    font-size: 14px
 
 @media screen and ( max-width: 320px )
     .header
