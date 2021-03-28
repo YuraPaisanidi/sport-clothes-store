@@ -65,7 +65,7 @@ class Cart {
         )
       );
     this.cartContainer
-      .querySelectorAll(".minus,")
+      .querySelectorAll(".minus")
       .forEach((el) =>
         el.addEventListener("click", (ev) =>
           this.changeQuantity(ev, this.deleteProduct)
