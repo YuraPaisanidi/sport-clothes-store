@@ -21,7 +21,7 @@ class Cart {
                                 <p class="modal-body__prod_title">Products</p>
                                 <div class="modal-body__prod_wrapper">
                                     <div class="modal-body__prod_item">
-                                        <img src="img/" alt="" class="modal-body__prod_image">
+                                        <img src="" alt="" class="modal-body__prod_image">
                                         <p class="modal-body__prod_name"></p>
                                     </div>
                                     <div class="modal-body__prod_amount">
