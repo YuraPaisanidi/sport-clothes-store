@@ -18,7 +18,7 @@ class ProductList {
                                       <div class="card-body">
                                       <a class="card-title mid-season-sale__item_name ">${product.title}</a>
                                       <p class="card-text mid-season-sale__item_price">$${product.price},00USD</p>
-                                      <a href="#" class="btn btn-primary mid-season-sale__item_button" data-id="${product.id}">Add to Cart</a>
+                                      <a href="##" class="btn btn-primary mid-season-sale__item_button" data-id="${product.id}">Add to Cart</a>
                                       </div>
                                   </div>`;
         });

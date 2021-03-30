@@ -1096,6 +1096,7 @@ a:hover {
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #dee2e6;
+  gap: 20px;
 }
 
 .modal-body__prod_title {
@@ -1157,6 +1158,7 @@ a:hover {
   padding-left: 18px;
   color: #717474;
   border: 1px solid #dee2e6;
+  font-size: 12px;
 }
 
 .modal-body__prod_price {
@@ -1180,6 +1182,7 @@ a:hover {
   color: #717474;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  font-weight: 800;
 }
 
 .modal-body__form_title {
@@ -1356,6 +1359,9 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .shopping-cart__icon {
+    right: 25px;
+  }
   .header__banner {
     padding: 50px 0;
   }

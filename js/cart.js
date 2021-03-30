@@ -13,50 +13,37 @@ class Cart {
     // .addEventListener('click', ev => this.order(ev));
   }
   saveCart() {
-    localStorage['cart'] = JSON.stringify(this.cart);
+    localStorage["cart"] = JSON.stringify(this.cart);
   }
   async renderCart() {
     let total = 0;
     let cartDomSting = `  <div class="modal-body__prod">
-                                <p class="modal-body__prod_title">Products</p>
-                                <div class="modal-body__prod_wrapper">
-                                    <div class="modal-body__prod_item">
-                                        <img src="" alt="" class="modal-body__prod_image">
-                                        <p class="modal-body__prod_name"></p>
-                                    </div>
-                                    <div class="modal-body__prod_amount">
-                                    </div>
-                                </div>`;
+                            <p class="modal-body__prod_title">Products</p>   
+                          </div>`;
 
     for (const id in this.cart) {
       const product = await this.productService.getProductById(id);
       total += product.price * this.cart[id];
-      cartDomSting += `
-                        <div class="modal-body__prod" data-id="${id}>
-                        <p class="modal-body__prod_title">Products</p>
-                        <div class="modal-body__prod_wrapper">
-                            <div class="modal-body__prod_item">
-                                <img src="img/${product.image}" alt="${product.title}" class="modal-body__prod_image">
-                                <p class="modal-body__prod_name">${product.title} (art.${product.id})</p>
-                            </div>
-                            <div class="modal-body__prod_amount">
-                                <button class="amount-btn minus" data-id=${id}>-</button>
-                                <input type="number" readonly value="${this.cart[id]}">
-                                <button class="amount-btn plus" data-id=${id}>+</button>
-                                <p class="modal-body__prod_price">$${product.price}.00USD</p>
-                            </div>
-                            <i class="far fa-trash-alt modal-body__prod_clear"></i>
-                        </div>
-                        <p class="modal-body__prod_sum">Total: $${total}USD</p>`;
+      cartDomSting += `       <div class="modal-body__prod_wrapper">
+                                  <div class="modal-body__prod_item">
+                                    <img src="img/${product.image}" alt="${product.title}" class="modal-body__prod_image">
+                                    <p class="modal-body__prod_name">${product.title} (art.${product.id})</p>
+                                  </div>
+                                  <div class="modal-body__prod_amount">
+                                    <button class="amount-btn minus" data-id=${id}>-</button>
+                                    <input type="number" readonly value="${this.cart[id]}">
+                                    <button class="amount-btn plus" data-id=${id}>+</button>
+                                    <p class="modal-body__prod_price">$${product.price}.00USD</p>
+                                  </div>
+                                  <i class="far fa-trash-alt modal-body__prod_clear"></i>
+                                </div>`;
     }
     total = total.toFixed(2);
     cartDomSting += `
-                  <div class="row">
-                      <div class="col-5"><strong>TOTAL</strong></div>
-                      <div class="col-3"><strong>$${total}</strong></div>
-                  </div>            
-          </div>`;
-    this.cartContainer.querySelector(".modal-dialog").innerHTML = cartDomSting;
+                      <p class="modal-body__prod_sum">Total: $${total}USD</p>`;
+    this.cartContainer.querySelector(
+      ".modal-body__prod"
+    ).innerHTML = cartDomSting;
     this.cartContainer
       .querySelectorAll(".plus")
       .forEach((el) =>

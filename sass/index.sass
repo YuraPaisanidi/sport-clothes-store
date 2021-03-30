@@ -57,7 +57,6 @@ a:hover
         align-items: center
         justify-content: center
 
-
 .header
 
     &__wrapper
@@ -234,16 +233,6 @@ a:hover
         span
             color: $accentColor
 
-        // &::after
-        //     display: block
-        //     position: relative
-        //     left: 75px
-        //     content: ""
-        //     width: 100px
-        //     border-bottom: 4px solid #e0e0e0
-        //     color: #e0e0e0
-        //     margin-top: 20px
-
     &__subtitle
         font-size: 20px
         color: $subtitleColor
@@ -385,7 +374,7 @@ a:hover
             font-size: 18px
             color: $subtitleColor
             text-decoration: none
-            
+
             &:hover
                 color: $subtitleColor
                 text-decoration: underline
@@ -430,7 +419,7 @@ a:hover
 
     &__banner
         background-image: url(../img/discount-bg.png)
-        width: 100% 
+        width: 100%
         background-size: cover
         background-position: center
         padding: 200px 0 210px
@@ -439,8 +428,8 @@ a:hover
         &_content
             display: flex
             flex-direction: column
-            align-items: flex-start 
-        
+            align-items: flex-start
+
         &_subtitle
             font-size: 24px
             font-family: $titleFont
@@ -473,7 +462,7 @@ a:hover
 
     &__cards
         width: 100%
-        
+
         &_wrapper
             width: 100%
             padding: 0 30px 0
@@ -499,7 +488,7 @@ a:hover
                 background-size: cover
 
             &:last-child
-                background-image: url(../img/discount-trainers.jpg  )
+                background-image: url(../img/discount-trainers.jpg )
                 background-position: center
                 background-size: cover
 
@@ -517,7 +506,7 @@ a:hover
             font-family: $titleFont
             color: $menuLinksColor
             margin: 0
-        
+
         &_link
             font-size: 14px
             color: $menuLinksColor
@@ -585,7 +574,7 @@ a:hover
         &_image
             max-width: 370px
             margin-bottom: 24px
-        
+
         &_name
             font-size: 18px
             color: $subtitleColor
@@ -700,13 +689,13 @@ a:hover
         color: rgba(255,255,255,0.65)
 
     &__wrapper
-        
+
         &_down
             display: flex
             align-items: center
             justify-content: space-between
             padding: 20px 0 20px 0
-    
+
     &__copyright
         font-size: 14px
         font-family: $titleFont
@@ -749,19 +738,20 @@ a:hover
 .modal-body
     display: flex
     flex-direction: column
-    
+
     &__prod
         display: flex
         flex-direction: column
         margin-bottom: 15px
         padding-bottom: 15px
         border-bottom: 1px solid #dee2e6
+        gap: 20px
 
         &_title
             font-size: 14px
             font-family: $titleFont
             color: $bgColor
-        
+
         &_wrapper
             display: flex
             justify-content: space-between
@@ -769,13 +759,13 @@ a:hover
             align-items: center
 
         &_item
-            display: flex 
+            display: flex
             align-items: center
 
         &_image
             width: 45px
             height: 45px
-        
+
         &_name
             font-size: 14px
             color: $subtitleColor
@@ -794,6 +784,7 @@ a:hover
                 padding-left: 18px
                 color: $subtitleColor
                 border: 1px solid #dee2e6
+                font-size: 12px
 
         &_price
             color: $subtitleColor
@@ -801,7 +792,7 @@ a:hover
             text-transform: uppercase
             margin: 0
             margin-left: 25px
-            
+
         &_clear
             color: $subtitleColor
 
@@ -812,6 +803,7 @@ a:hover
             font-size: 18px
             color: $subtitleColor
             align-self: flex-end
+            font-weight: 800
 
     &__form
 
@@ -819,7 +811,7 @@ a:hover
             font-size: 14px
             font-family: $titleFont
             color: $bgColor
-        
+
         &_item
             display: flex
             flex-direction: column
@@ -900,7 +892,7 @@ a:hover
             grid-row-gap: 80px
 
     .get-your-discount
-        
+
         &__banner
 
             &_content
@@ -961,13 +953,13 @@ a:hover
             &_item
                 padding: 20px
 
-    .main-collection    
+    .main-collection
 
         &__tabs
 
             &_image
                 max-width: 250px
-            
+
     .modal-dialog
         max-width: 768px
 
@@ -979,6 +971,9 @@ a:hover
                 margin-left: 250px
 
 @media screen and ( max-width: 768px  )
+    .shopping-cart__icon
+        right: 25px
+
     .header
 
         &__banner
@@ -986,25 +981,25 @@ a:hover
 
             &_title
                 font-size: 90px
-    
+
     .get-your-discount
         &__banner
 
             &_title
                 font-size: 90px
-        
+
         &__cards
 
             &_wrapper
-                grid-template-columns: 1fr 
+                grid-template-columns: 1fr
                 grid-row-gap: 30px
 
             &_item
                 padding: 120px 30px 30px 30px
 
-    .main-collection   
+    .main-collection
         &__subtitle
-            text-align: center 
+            text-align: center
 
         &__tabs
             width: 100%
@@ -1029,7 +1024,6 @@ a:hover
             &_amount
                 margin-left: 150px
 
-
 @media screen and ( max-width: 640px )
     .header
 
@@ -1052,7 +1046,7 @@ a:hover
 
         &__cards
             grid-template-columns: 1fr 1fr
-    
+
     .get-your-discount
         &__banner
             padding: 150px 0 150px
@@ -1076,16 +1070,13 @@ a:hover
 
             &_top
                 grid-template-columns: 1fr 1fr 1fr
-                padding: 30px 15px 30px 15px 
+                padding: 30px 15px 30px 15px
 
         &__column
             align-items: center
 
             &:first-child
                 display: none
-
-
-
 
 @media screen and ( max-width: 480px )
     .header
@@ -1107,7 +1098,6 @@ a:hover
                 text-align: center
                 font-size: 60px
 
-    
     .why-choose-us
         padding-top: 20px
 
@@ -1151,7 +1141,6 @@ a:hover
         padding: 40px 0 60px
 
     .modal-dialog
-        // max-width: 320px
 
     .modal-body
 
@@ -1171,13 +1160,13 @@ a:hover
 
             &_sum
                 font-size: 16px
-        
+
         &__form
 
             &_item
 
                 label
-                    font-size: 14px 
+                    font-size: 14px
 
                 input
                     font-size: 14px
@@ -1200,7 +1189,7 @@ a:hover
 
             &_menu-item
                 font-size: 15px
-            
+
 @media screen and ( max-width: 320px )
     .header
 
@@ -1278,17 +1267,17 @@ a:hover
     .get-your-discount
         &__banner
             padding: 60px 0 60px 0
-            
+
             &_button
                 width: 100px
                 height: 40px
                 font-size: 14px
-            
+
             &_title
                 font-size: 50px
 
         &__cards
-            
+
             &_wrapper
                 padding-left: 15px
                 padding-right: 15px
@@ -1318,9 +1307,9 @@ a:hover
                 font-size: 12px
 
     .footer
-        
+
         &__wrapper
-           
+
             &_top
                 grid-template-columns: 1fr
                 grid-gap: 25px
@@ -1328,7 +1317,7 @@ a:hover
         &__column
 
             &:last-child
-                max-height: 100px 
+                max-height: 100px
                 justify-content: center
 
                 ul
@@ -1339,7 +1328,3 @@ a:hover
 
             &_title
                 color: $accentColor
-
-            
-
-
